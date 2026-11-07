@@ -31,4 +31,4 @@ sequenceDiagram
     activate server
     server-->>browser: 201 Created {"message":"Hello"}
     deactivate server
-``
+```
