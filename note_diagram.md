@@ -26,4 +26,11 @@ sequenceDiagram
     deactivate server
 
     Note right of browser: The browser executes the callback function that renders the notes
+
+    browser ->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
+    activate server 
+    server ->> browser : sends status 302 indicating URL Redirect
+    deactivate server
+
+    Note right of browser: The browser performs a new new HTTP GET request to the address defined in the header's Location
 ```
